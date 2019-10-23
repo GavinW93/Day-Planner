@@ -38,66 +38,66 @@
       <!-- Timeblocks go here -->
               <div class= "9am">
                 <h1>9 AM</h1>
-                <h1 id= "block1" type= "number" value= "0"></h1>
+                <h1 id= "block1" type= "number" value= "0">9 AM</h1>
                               <h2 id=""></h2>
                               <input type='text' name="server" id="saveServer"/> 
                               <button class="saveBtn" onclick="saveData()" type="button">Save</button>
                  </div>
 
               <div class= "10am">
-
-                  <h1 id= "block2" type= "number" value= "0"> 10 AM</h1>
-                    <input type='text' name="server" id="saveServer"/> 
-                    <button class="saveBtn" onclick="saveData()" type="button">Save</button>
+                <h1>10 AM</h1>
+                  <h1 id= "block2" type= "number" value= "0">10 AM</h1>
+                    <input type='text' name="server1" id="saveServer1"/> 
+                    <button class="saveBtn1" onclick="saveData1()" type="button">Save</button>
                 </div>
 
                 <div class= "11am">
-
+                  <h1>11 AM</h1>
                   <h1 id= "block3" type= "number" value= "0"> 11 AM</h1>
-                    <input type='text' name="server" id="saveServer"/> 
-                    <button class="saveBtn" onclick="saveData()" type="button">Save</button>
+                    <input type='text' name="server2" id="saveServer2"/> 
+                    <button class="saveBtn2" onclick="saveData2()" type="button">Save</button>
                 </div>
 
                 <div class= "12pm">
-
+                  <h1>12 PM</h1>
                   <h1 id= "block4" type= "number" value= "0"> 12 PM</h1>
-                    <input type='text' name="server" id="saveServer"/> 
-                    <button class="saveBtn" onclick="saveData()" type="button">Save</button>
+                    <input type='text' name="server3" id="saveServer3"/> 
+                    <button class="saveBtn3" onclick="saveData3()" type="button">Save</button>
                 </div>
 
                 <div class= "1pm">
-
+                  <h1>1 PM</h1>
                   <h1 id= "block5" type= "number" value= "0"> 1 PM</h1>
-                    <input type='text' name="server" id="saveServer"/> 
-                    <button class="saveBtn" onclick="saveData()" type="button">Save</button>
+                    <input type='text' name="server4" id="saveServer4"/> 
+                    <button class="saveBtn4" onclick="saveData4()" type="button">Save</button>
                 </div>
 
                 <div class= "2pm">
-
+                  <h1>2 PM</h1>
                   <h1 id= "block6" type= "number" value= "0"> 2 PM</h1>
-                    <input type='text' name="server" id="saveServer"/> 
-                    <button class="saveBtn" onclick="saveData()" type="button">Save</button>
+                    <input type='text' name="server5" id="saveServer5"/> 
+                    <button class="saveBtn5" onclick="saveData5()" type="button">Save</button>
                 </div>
 
                 <div class= "3pm">
-
+                  <h1>3 PM</h1>
                   <h1 id= "block7" type= "number" value= "0"> 3 PM</h1>
-                    <input type='text' name="server" id="saveServer"/> 
-                    <button class="saveBtn" onclick="saveData()" type="button">Save</button>
+                    <input type='text' name="server6" id="saveServer6"/> 
+                    <button class="saveBtn6" onclick="saveData6()" type="button">Save</button>
                 </div>
 
                 <div class= "4pm">
-
+                  <h1>4 PM</h1>
                   <h1 id= "block8" type= "number" value= "0"> 4 PM</h1>
-                    <input type='text' name="server" id="saveServer"/> 
-                    <button class="saveBtn" onclick="saveData()" type="button">Save</button>
+                    <input type='text' name="server7" id="saveServer7"/> 
+                    <button class="saveBtn7" onclick="saveData7()" type="button">Save</button>
                 </div>
 
                 <div class= "5pm">
-
+                  <h1>5 PM</h1>
                   <h1 id= "block9" type= "number" value= "0"> 5 PM</h1>
-                    <input type='text' name="server" id="saveServer"/> 
-                    <button class="saveBtn" onclick="saveData()" type="button">Save</button>
+                    <input type='text' name="server8" id="saveServer8"/> 
+                    <button class="saveBtn8" onclick="saveData8()" type="button">Save</button>
                 </div>
     </div>
     
@@ -105,7 +105,7 @@
    
 
 <div id="result">
-  big time
+  
 </div>
                         
 
@@ -118,6 +118,8 @@
    // document.getElementById("block").innerHTML = m;
    var newhour = document.getElementById("block1").value
    console.log(newhour);
+   var maintime = moment()
+   document.getElementById("cacn").innerHTML = maintime;
     // if the current time matches 9 am the make 9 am green
     //if(m== 9)
    // {
@@ -127,54 +129,54 @@
     if(m< 9)
     {
       console.log("past");
-      document.getElementById("block1").style.backgroundColor = "grey";
+      document.getElementById("block1").style.backgroundColor = "red";
     }
     //if the current time is after 9am then make 9am grey
     if(m> 9)
     {
       console.log("future");
-      document.getElementById("block1").style.backgroundColor = "red";
+      document.getElementById("block1").style.backgroundColor = "grey";
     }
     if(m== 9)
     {
       console.log("present");
-      document.getElementById("block1").style.backgroundColor = "red";
+      document.getElementById("block1").style.backgroundColor = "green";
 
     }
 
         if(m< 10)
             {
               console.log("past");
-              document.getElementById("block2").style.backgroundColor = "grey";
+              document.getElementById("block2").style.backgroundColor = "red";
             }
             //if the current time is after 9am then make 9am grey
         if(m> 10)
             {
               console.log("future");
-              document.getElementById("block2").style.backgroundColor = "red";
+              document.getElementById("block2").style.backgroundColor = "grey";
             }
         if(m== 10)
             {
               console.log("present");
-              document.getElementById("block2").style.backgroundColor = "red";
+              document.getElementById("block2").style.backgroundColor = "green";
 
             }
 
         if(m< 11)
             {
               console.log("past");
-              document.getElementById("block3").style.backgroundColor = "grey";
+              document.getElementById("block3").style.backgroundColor = "red";
             }
             //if the current time is after 9am then make 9am grey
         if(m> 11)
             {
               console.log("future");
-              document.getElementById("block3").style.backgroundColor = "red";
+              document.getElementById("block3").style.backgroundColor = "grey";
             }
         if(m== 11)
             {
               console.log("present");
-              document.getElementById("block3").style.backgroundColor = "red";
+              document.getElementById("block3").style.backgroundColor = "green";
 
             }
 
@@ -183,36 +185,36 @@
         if(m< 12)
             {
               console.log("past");
-              document.getElementById("block4").style.backgroundColor = "grey";
+              document.getElementById("block4").style.backgroundColor = "red";
             }
             //if the current time is after 9am then make 9am grey
         if(m> 12)
             {
               console.log("future");
-              document.getElementById("block4").style.backgroundColor = "red";
+              document.getElementById("block4").style.backgroundColor = "grey";
             }
         if(m== 12)
             {
               console.log("present");
-              document.getElementById("block4").style.backgroundColor = "red";
+              document.getElementById("block4").style.backgroundColor = "green";
 
             }
     
         if(m< 13)
             {
               console.log("past");
-              document.getElementById("block5").style.backgroundColor = "grey";
+              document.getElementById("block5").style.backgroundColor = "red";
             }
             //if the current time is after 9am then make 9am grey
         if(m> 13)
             {
               console.log("future");
-              document.getElementById("block5").style.backgroundColor = "red";
+              document.getElementById("block5").style.backgroundColor = "grey";
             }
         if(m== 13)
             {
               console.log("present");
-              document.getElementById("block5").style.backgroundColor = "red";
+              document.getElementById("block5").style.backgroundColor = "green";
 
             }
 
@@ -222,18 +224,18 @@
         if(m< 14)
             {
               console.log("past");
-              document.getElementById("block6").style.backgroundColor = "grey";
+              document.getElementById("block6").style.backgroundColor = "red";
             }
             //if the current time is after 9am then make 9am grey
         if(m> 14)
             {
               console.log("future");
-              document.getElementById("block6").style.backgroundColor = "red";
+              document.getElementById("block6").style.backgroundColor = "grey";
             }
         if(m== 14)
             {
               console.log("present");
-              document.getElementById("block6").style.backgroundColor = "red";
+              document.getElementById("block6").style.backgroundColor = "green";
 
             }
 
@@ -241,18 +243,18 @@
         if(m< 15)
             {
               console.log("past");
-              document.getElementById("block7").style.backgroundColor = "grey";
+              document.getElementById("block7").style.backgroundColor = "red";
             }
             //if the current time is after 9am then make 9am grey
         if(m> 15)
             {
               console.log("future");
-              document.getElementById("block7").style.backgroundColor = "green";
+              document.getElementById("block7").style.backgroundColor = "grey";
             }
         if(m== 15)
             {
               console.log("present");
-              document.getElementById("block7").style.backgroundColor = "red";
+              document.getElementById("block7").style.backgroundColor = "green";
 
             }
 
@@ -260,18 +262,18 @@
         if(m< 16)
             {
               console.log("past");
-              document.getElementById("block8").style.backgroundColor = "grey";
+              document.getElementById("block8").style.backgroundColor = "red";
             }
             //if the current time is after 9am then make 9am grey
         if(m> 16)
             {
               console.log("future");
-              document.getElementById("block8").style.backgroundColor = "green";
+              document.getElementById("block8").style.backgroundColor = "grey";
             }
         if(m== 16)
             {
               console.log("present");
-              document.getElementById("block8").style.backgroundColor = "red";
+              document.getElementById("block8").style.backgroundColor = "green";
 
             }
     
@@ -280,18 +282,18 @@
             if(m< 17)
             {
               console.log("past");
-              document.getElementById("block9").style.backgroundColor = "grey";
+              document.getElementById("block9").style.backgroundColor = "red";
             }
             //if the current time is after 9am then make 9am grey
         if(m> 17)
             {
               console.log("future");
-              document.getElementById("block9").style.backgroundColor = "green";
+              document.getElementById("block9").style.backgroundColor = "grey";
             }
         if(m== 17)
             {
               console.log("present");
-              document.getElementById("block9").style.backgroundColor = "red";
+              document.getElementById("block9").style.backgroundColor = "green";
 
             }
     </script>
